@@ -9,16 +9,17 @@ using namespace std;
 int main()
 {
 	char* result =  new char[1024];
-	string url, date = "2023-05-25", cursor, key, count;
-	CString url2, date2, cursor2, key2, count2;
+	string url, date = "2023-05-25", cursor, key, count, cursor;
+	CString url2, date2, cursor2, key2, count2, cursor2;
 	int cnt;
 	//cin >> key >> cnt >> date;
 	cin >> cnt;
 	count = to_string(cnt);
 	count2 = count.c_str();
+	cursor2 = curcor.c_str();
 	url2 = url.c_str();
 	date2 = date.c_str();
-	url2 = L"https://public.api.nexon.com/openapi/maplestory/v1/cube-use-results?count=" + count2 + "&date=" + date2 + "&cursor=";
+	url2 = L"https://public.api.nexon.com/openapi/maplestory/v1/cube-use-results?count=" + count2 + "&date=" + date2 + "&cursor=" + cursor2;
 	CInternetSession session(NULL, 1, INTERNET_OPEN_TYPE_PRECONFIG, NULL, NULL, INTERNET_FLAG_DONT_CACHE);
 	try
 	{
